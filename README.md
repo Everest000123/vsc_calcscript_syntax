@@ -1,2 +1,23 @@
-# vsc_calcscript_syntax
-Essbase calcscript syntax highlighting for VSCode
+# Syntax highlighting for Essbase calcscript
+
+This is no syntax highlights for Essbase calcscript so I wrote my own.
+
+## Features
+
+Syntax Highlighting support for:
+
+- @[Commands]
+- IF|ELSE|ELSEIF|ENDIF|FIX|ENDFIX
+- Comments 
+    - inline //
+    - block /* */
+- Keywords
+> AGGMISSG|CACHE|CALCPARALLEL|CALCTASKDIMS|CCTRACKCALC|CLEARUPDATESTATUS|COPYMISSINGBLOCK
+> CREATENONMISSINGBLK|CREATEBLOCKONEQ|FRMLBOTTOMUP|LOCKBLOCK|MSG|NOTICE|UPDATECALC|UPTOLOCAL
+> VAR|ARRAY|ALL|AVERAGE|DIM|FIRST|LAST|TWOPASS|ON|OFF|HIGH|DEFAULT|LOW|ALL
+> AGG|CALC|SET|CCONV|CLEARBLOCK|CLEARCCTRACK|CLEARDATA|DATACOPY|LOOP|ENDLOOP|EXCLUDE|ENDEXCLUDE|
+> AND|OR|NOT
+
+## Installation
+
+Copy folder into `%USERPROFILE%\. vscode\extensions` and reload VSCode

@@ -1,0 +1,25 @@
+{
+    "name": "vsc_calcscript_syntax",
+    "displayName": "CalcScript Syntax",
+    "description": "CalcScript Syntax Highlighting",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "csc",
+            "aliases": ["Essbase CalcScript", "csc"],
+            "extensions": [".csc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "csc",
+            "scopeName": "source.csc",
+            "path": "./syntaxes/csc.tmLanguage.json"
+        }]
+    }
+}

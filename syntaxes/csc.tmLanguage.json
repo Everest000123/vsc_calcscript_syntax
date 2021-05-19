@@ -1,0 +1,86 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Essbase CalcScript",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variables"
+		},						
+		{
+			"include": "#constants"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+				"name": "keyword.control.sql",
+				"match": "\\b(IF|ELSE|ELSEIF|ENDIF|FIX|ENDFIX|ABS|ACCUM|ALLANCESTORS|ALIAS|ALLOCATE|ANCEST|ANCESTORS|ANCESTVAL|ATTRIBUTE|ATTRIBUTEBVAL|ATTRIBUTESVAL|ATTRIBUTEVAL|AVG|AVGRANGE|BETWEEN|CALCMODE|CHILDREN|COMPOUND|COMPOUNDGROWTH|CONCATENATE|CORRELATION|COUNT|CURGEN|CURLEV|CURRMBR|CURRMBRRANGE|DATEDIFF|DATEPART|DATEROLL|DECLINE|DESCENDANTS|DISCOUNT|ENUMVALUE|EQUAL|EXP|EXPAND|FACTORIAL|FORMATDATE|GEN|GENMBRS|GROWTH|IALLANCESTORS|IANCESTORS|ICHILDREN|IDESCENDANTS|ILANCESTORS|ILDESCENDANTS|ILSIBLINGS|INT|INTEREST|IRDESCENDANTS|IRR|IRSIBLINGS|ISACCTYPE|ISANCEST|ISCHILD|ISDESC|ISGEN|ISIANCEST|ISIBLINGS|ISICHILD|ISIDESC|ISIPARENT|ISISIBLING|ISLEV|ISMBR|ISPARENT|ISSAMEGEN|ISSAMELEV|ISSIBLING|ISUDA|LANCESTORS|LDESCENDANTS|LEV|LEVMBRS|LIKE|LIST|LN|LOG|LOG10|LSIBLINGS|MATCH|MAX|MAXRANGE|MAXS|MAXSRANGE|MBRCOMPARE|MBRPARENT|MDALLOCATE|MDANCESTVAL|MDPARENTVAL|MDSHIFT|MEDIAN|MEMBER|MERGE|MIN|MINRANGE|MINS|MINSRANGE|MOD|MODE|MOVAVG|MOVMAX|MOVMED|MOVMIN|MOVSUM|MOVSUMX|NAME|NEXT|NEXTS|NEXTSIBLING|NOTEQUAL|NPV|PARENT|PARENTVAL|POWER|PREVSIBLING|PRIOR|PRIORS|PTD|RANGE|RANK|RDESCENDANTS|REMAINDER|REMOVE|ROUND|RELATIVE|RSIBLINGS|SANCESTVAL|SHARE|SHIFT|SHIFTMINUS|SHIFTPLUS|SHIFTSIBLING|SIBLINGS|SLN|SPARENTVAL|SPLINE)\\b"
+				}
+			]
+			},
+		"comments": {
+			"patterns": [
+				{
+				"name": "comment.line.double-slash.sql",
+				"begin": "//",
+				"end": "\n"
+
+				},
+				{
+				"name":"comment.block.sql",
+				"begin": "\/[*]",
+				"end": "[*](\/)"
+				}
+			]
+		},
+		"strings":{
+			"patterns": [
+				{
+				"name":"string.quoted.single.sql",
+				"begin": "'",
+				"end": "'"
+				},
+				{
+				"name":"string.quoted.double.sql",
+				"begin": "\"",
+				"end": "\""
+				}
+			]
+		},
+		"variables":{
+			"patterns": [
+				{
+				"name": "variable.language.sql"	,
+				"match": "\\b(AGGMISSG|CACHE|CALCPARALLEL|CALCTASKDIMS|CCTRACKCALC|CLEARUPDATESTATUS|COPYMISSINGBLOCK|CREATENONMISSINGBLK|CREATEBLOCKONEQ|FRMLBOTTOMUP|LOCKBLOCK|MSG|NOTICE|UPDATECALC|UPTOLOCAL|VAR|ARRAY|ALL|AVERAGE|DIM|FIRST|LAST|TWOPASS|ON|OFF|HIGH|DEFAULT|LOW|ALL)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+				"name": "constant.character",
+				"match": "(<|>|=|!|\\+|-|\\*|%|\\@)"
+				},
+				{
+				"name": "constant.language",
+				"match": "\\b(AGG|CALC|SET|CCONV|CLEARBLOCK|CLEARCCTRACK|CLEARDATA|DATACOPY|LOOP|ENDLOOP|EXCLUDE|ENDEXCLUDE|AND|OR|NOT)\\b"
+				},
+				{
+				"name": "constant.numeric",
+				"match": "[0-9]"
+				}
+			]
+		}
+
+	},
+	"scopeName": "source.csc"
+}

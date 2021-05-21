@@ -20,4 +20,4 @@ Syntax Highlighting support for:
 
 ## Installation
 
-Copy folder into `%USERPROFILE%\. vscode\extensions` and reload VSCode
+Copy folder into `%USERPROFILE%\.vscode\extensions` and reload VSCode
